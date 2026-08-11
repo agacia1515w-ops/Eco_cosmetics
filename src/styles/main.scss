@@ -1,6 +1,4 @@
-@import 'utils';
-@import 'typography';
+@use './utils';
+@use './typography';
+@use './reset';
 
-body {
-  background: $c-gray;
-}
