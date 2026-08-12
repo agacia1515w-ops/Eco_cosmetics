@@ -4,7 +4,8 @@
 @use './utils/vars';
 
 @use './blocks/header';
+@use './blocks/button';
 
 body {
-  background-color: vars.$c-gray;
+  background-color: #e4dfd3;
 }

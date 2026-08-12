@@ -1,3 +1,50 @@
-header {
-  background-color: aqua;
+.header {
+  width: 100%;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+  }
+
+  &__name {
+    width: 208px;
+    height: 18px;
+
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 130%;
+    color: #344f10;
+    text-transform: uppercase;
+    letter-spacing: 5%;
+    white-space: nowrap;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-left: auto;
+  }
+  &__link {
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: Medium;
+    line-height: 150%;
+    color: #344f10;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 0%;
+  }
 }
