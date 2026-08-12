@@ -1,23 +1,23 @@
+.button--cart {
+  grid-column: 3;
+  justify-self: end;
 
-.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
   border: none;
-  cursor: pointer;
   background: transparent;
+  cursor: pointer;
 
-  &--cart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 32px;
-    height: 32px;
-    padding: 0;
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
