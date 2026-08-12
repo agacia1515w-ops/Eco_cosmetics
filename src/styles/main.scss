@@ -1,4 +1,12 @@
 @use './utils';
 @use './typography';
 @use './reset';
+@use './utils/vars';
 
+@use './blocks/header';
+
+
+
+body {
+  background-color: vars.$c-gray;
+}
