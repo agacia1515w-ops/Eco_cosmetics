@@ -2,10 +2,10 @@
   width: 100%;
 
   &__container {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-     padding: 40px 140px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 40px 140px;
   }
 
   &__logo {
@@ -31,11 +31,12 @@
   }
 
   &__nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin-left: 120px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 120px;
   }
   &__link {
     font-family: Poppins, sans-serif;
@@ -49,8 +50,8 @@
     letter-spacing: 0%;
   }
   &__brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
 }
