@@ -1,10 +1,10 @@
 .divider {
-  height: 1px;
-  background-color: #344F1080;
   width: 610px;
+  height: 1px;
+  background-color: #344f1080;
 
-    &--first {
-    grid-column: 1 / 6; 
+  &--first {
+    grid-column: 1 / 6;
     margin-top: 180px;
   }
 }
