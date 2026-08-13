@@ -1,28 +1,29 @@
 .brand {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  padding: 40px 230px;
+   display: grid; 
+  grid-template-columns: repeat(12, 80px); 
+  column-gap: 20px; 
+  margin: 0 130px;
+ 
 
   &__content {
-    display: flex;
-    flex-direction: column;
+    grid-column: 2 / 7;
+    
+    
   }
 
   &__title {
     margin-bottom: 30px;
-
     font-family: Poppins, sans-serif;
     font-size: 60px;
     font-weight: 600;
     line-height: 130%;
     color: #333;
     letter-spacing: 0%;
+    
   }
 
   &__text {
     margin-bottom: 50px;
-
     font-family: Poppins, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -32,10 +33,16 @@
   }
 
   &__image {
+    grid-column: 7 / 13;
+      width: 580px;
+  height: 451px;
+  
     img {
       display: block;
       width: 100%;
       height: auto;
+      object-fit: cover;
+    
     }
   }
 }
