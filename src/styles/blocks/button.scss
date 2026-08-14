@@ -1,57 +1,48 @@
-.button--cart {
+.button {
   cursor: pointer;
-
-  display: flex;
-  grid-column: 3;
-  align-items: center;
-  justify-content: center;
-  justify-self: end;
-
-  width: 32px;
-  height: 32px;
-  padding: 0;
   border: none;
 
-  background: transparent;
-
-  img {
+  &__icon {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
-}
 
-.button--primary {
-  cursor: pointer;
+  &--cart {
+    display: flex;
+    grid-column: 3;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
 
-  display: flex;
-  grid-column: 3;
-  align-items: center;
-  justify-content: center;
-  justify-self: end;
+    width: 32px;
+    height: 32px;
+    padding: 0;
 
-  width: 280px;
-  height: 60px;
-  padding: 0;
-  border: none;
+    background: transparent;
+  }
 
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  font-style: SemiBold;
-  line-height: 130%;
-  color: #f2f2f2;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 15%;
+  &--primary {
+    display: flex;
+    grid-column: 3;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
 
-  background-color: #333;
+    width: 280px;
+    height: 60px;
+    padding: 0;
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+    color: #f2f2f2;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 15%;
+
+    background-color: #333;
   }
 }
