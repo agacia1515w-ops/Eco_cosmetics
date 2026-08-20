@@ -91,7 +91,6 @@
     display: inline-block;
 
     padding-bottom: 10px;
-    border-bottom: 1px solid #344f10;
 
     font-family: Poppins, sans-serif;
     font-size: 14px;
@@ -101,6 +100,11 @@
     color: #344f10;
     text-decoration: none;
     letter-spacing: 0%;
+    &:hover {
+      color: #333;
+      text-decoration: underline;
+      text-underline-offset: 13px;
+    }
   }
   &__images {
     display: flex;
@@ -112,6 +116,7 @@
   &__image {
     flex-shrink: 0;
     margin-bottom: 200px;
+
     &--big {
       width: 380px;
       height: 529px;

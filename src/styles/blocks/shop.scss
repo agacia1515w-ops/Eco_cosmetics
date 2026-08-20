@@ -7,6 +7,39 @@
 
   margin-left: 130px;
 
+  &__text {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    transform: rotate(0deg);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    width: 18px;
+    height: 302px;
+
+    writing-mode: sideways-lr;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: Medium;
+    line-height: 130%;
+    color: #344f10;
+    letter-spacing: 0%;
+  }
+
+  &__line {
+    position: absolute;
+    top: 49px;
+    left: 40px;
+
+    width: 1px;
+    height: 100px;
+
+    background-color: #344f10;
+  }
+
   &__title {
     grid-column: 2/13;
     grid-row: 1;
@@ -43,7 +76,13 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 5%;
+    &:hover {
+      color: #333;
+      text-decoration: underline;
+      text-underline-offset: 10px;
+    }
   }
+
   &__products {
     display: grid;
     grid-column: 2 / 13;
@@ -63,12 +102,15 @@
     text-transform: uppercase;
     letter-spacing: 5%;
   }
+
   &__image {
     margin-bottom: 20px;
   }
+
   &__name {
     margin-bottom: 13px;
   }
+
   &__price {
     margin-bottom: 40px;
 
@@ -79,6 +121,7 @@
     text-transform: uppercase;
     letter-spacing: 5%;
   }
+
   &__button {
     display: flex;
     grid-column: 2 / 13;
