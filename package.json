@@ -2,7 +2,7 @@
   "name": "eco_cosmetics",
   "version": "1.0.0",
   "description": "Eco Cosmetics",
-  "homepage": "Eco_cosmetics",
+  "homepage": "/Eco_cosmetics/",
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",

@@ -77,6 +77,7 @@
     display: inline-block;
     grid-column: 2/ 6;
 
+    margin-bottom: 40px;
     padding-bottom: 10px;
 
     font-size: 14px;
@@ -99,12 +100,14 @@
   }
 
   &__button {
+    position: relative;
+    top: -150px;
+
     display: flex;
-    grid-column: 3;
     grid-column: 2 / 5;
     align-items: center;
     justify-content: center;
-    justify-self: end;
+    justify-self: start;
 
     width: 280px;
     height: 60px;
