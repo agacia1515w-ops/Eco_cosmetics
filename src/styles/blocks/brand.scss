@@ -4,7 +4,7 @@
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: 20px;
 
-  width: 100%;
+  width: auto;
   max-width: 1180px;
   margin: 0 auto;
   padding-inline: 20px;
@@ -38,6 +38,7 @@
   &__image {
     grid-column: 7 / 13;
     min-width: 0;
+      padding-right: 20px;
 
     &-img {
       display: block;
