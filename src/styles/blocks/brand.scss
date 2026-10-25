@@ -1,14 +1,21 @@
+
 .brand {
   display: grid;
-  grid-template-columns: repeat(12, 80px);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: 20px;
-  margin: 0 130px;
+
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-inline: 20px;
 
   &__content {
-    grid-column: 2 / 7;
+    grid-column: 1 / 7;
+    min-width: 0;
   }
 
   &__title {
+    margin-top: 0;
     margin-bottom: 30px;
 
     font-family: Poppins, sans-serif;
@@ -16,7 +23,6 @@
     font-weight: 600;
     line-height: 130%;
     color: #333;
-    letter-spacing: 0%;
   }
 
   &__text {
@@ -25,17 +31,15 @@
     font-family: Poppins, sans-serif;
     font-size: 16px;
     font-weight: 400;
-    font-style: Regular;
     line-height: 150%;
     color: #333;
   }
 
   &__image {
     grid-column: 7 / 13;
-    width: 580px;
-    height: 451px;
+    min-width: 0;
 
-    &__image-img {
+    &-img {
       display: block;
       width: 100%;
       height: auto;
@@ -43,3 +47,4 @@
     }
   }
 }
+
