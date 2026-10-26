@@ -1,7 +1,7 @@
 .dividers {
   display: grid;
   grid-template-columns: repeat(12, 80px);
-  column-gap: 20px;
+  
 }
 
 .divider {
@@ -9,12 +9,13 @@
   background-color: #344f1080;
 
   &--first {
-    grid-column: 1 / 7;
+    grid-column: 1 / 8;
     margin-top: 100px;
   }
   &--second {
-    grid-column: 8 / 14;
+    grid-column: 9/ 14;
     margin-top: 131px;
     margin-bottom: 200px;
+  
   }
 }
