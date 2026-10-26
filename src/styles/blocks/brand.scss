@@ -3,14 +3,14 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: 20px;
-
-  width: auto;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 1180px;
-  margin: 0 auto;
+  margin-inline: auto;
   padding-inline: 20px;
 
   &__content {
-    grid-column: 1 / 7;
+    grid-column: 2 / 7;
     min-width: 0;
   }
 
