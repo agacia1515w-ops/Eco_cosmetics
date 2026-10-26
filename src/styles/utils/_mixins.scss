@@ -39,9 +39,9 @@
 
 @mixin grid() {
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
+  width: 100%;
 
   @include for-tablet {
     grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -56,12 +56,16 @@
 
 @mixin visually-hidden() {
   position: absolute;
+
+  overflow: hidden;
+
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+  padding: 0;
   border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(50%);
 }

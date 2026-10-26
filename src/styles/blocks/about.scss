@@ -1,35 +1,43 @@
 .about {
   display: grid;
-  grid-template-columns: repeat(12, 80px);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   column-gap: 20px;
-  align-items: start;
-  
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  padding-inline: 90px;
+ 
 
   &__content {
     position: relative;
-    grid-column: 3/ 8;
-    grid-row: 1;
+    grid-column: 2/ 7;
   }
 
   &__line {
     position: absolute;
     top: 165px;
-    left: -120px;
+    left: -110px;
+
     width: 1px;
     height: 30%;
+
     background-color: #344f10;
   }
 
   &__text {
     position: absolute;
     top: 0;
-    left: -130px;
+    left: -120px;
     transform: rotate(0deg);
+
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+
     width: 18px;
     height: 302px;
+
     writing-mode: sideways-lr;
     font-size: 14px;
     font-weight: 500;
@@ -42,7 +50,9 @@
   &__description {
     display: grid;
     grid-column: 1/ 7;
+
     margin-bottom: 30px;
+
     font-family: Poppins, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -53,6 +63,7 @@
 
     &--second {
       margin-bottom: 40px;
+
       font-family: Poppins, sans-serif;
       font-size: 16px;
       font-weight: 400;
@@ -65,8 +76,10 @@
   &__title {
     display: grid;
     grid-column: 1/ 7;
+
     margin-top: 0;
     margin-bottom: 40px;
+
     font-family: Poppins, sans-serif;
     font-size: 36px;
     font-weight: 600;
@@ -75,10 +88,13 @@
     color: #344f10;
     text-transform: uppercase;
     letter-spacing: 5%;
+   
   }
   &__link {
     display: inline-block;
+
     padding-bottom: 10px;
+
     font-family: Poppins, sans-serif;
     font-size: 14px;
     font-weight: 500;
@@ -95,13 +111,12 @@
   }
   &__images {
     display: flex;
-    grid-column: 8 / 12;
+    grid-column:7 / 12;
     gap: 20px;
     align-items: flex-start;
   }
 
   &__image {
-    flex-shrink: 0;
     margin-bottom: 200px;
 
     &--big {
@@ -110,9 +125,13 @@
     }
 
     &--small {
+      display: block;
       align-self: flex-end;
-      width: 180px;
-      height: 430px;
+
+      width: 100%;
+      height: auto;
+
+      object-fit: cover;
     }
   }
 }
