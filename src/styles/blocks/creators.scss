@@ -5,6 +5,9 @@
   grid-template-columns: repeat(12, 80px);
   column-gap: 20px;
   align-items: start;
+
+  margin-bottom: 200px;
+
   font-family: Poppins, sans-serif;
 
   &__content {
@@ -100,6 +103,7 @@
   &__button {
     position: relative;
     transform: translateY(-66px);
+
     display: flex;
     grid-column: 3 / 5;
     grid-row: 2;
