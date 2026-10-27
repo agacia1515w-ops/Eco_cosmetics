@@ -76,9 +76,7 @@
   }
   &__link {
     display: inline-block;
-    grid-column:2/ 6;
-
-
+    grid-column: 2/ 6;
 
     font-size: 14px;
     font-weight: 500;
@@ -97,7 +95,6 @@
   &__images {
     grid-column: 8/12;
     grid-row: 1;
-    
   }
 
   &__button {

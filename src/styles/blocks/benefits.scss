@@ -1,11 +1,10 @@
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
 
-    .benefits {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;
-    gap: 24px;
-    padding: 40px 0 50px;
-
+  padding: 40px 0 50px;
 
   &__item {
     display: flex;
@@ -17,8 +16,8 @@
   &__icon {
     width: 90px;
     height: 90px;
-    object-fit: contain;
     margin-bottom: 35px;
+    object-fit: contain;
   }
 
   &__text {
