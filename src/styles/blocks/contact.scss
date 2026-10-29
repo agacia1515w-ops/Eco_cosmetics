@@ -1,0 +1,146 @@
+.contact {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(12, 80px);
+  column-gap: 20px;
+  align-items: start;
+
+  font-family: Poppins, sans-serif;
+
+  &__text {
+    position: absolute;
+    left: 70px;
+    transform: rotate(0deg);
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    width: 18px;
+    height: 302px;
+
+    writing-mode: sideways-lr;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: Medium;
+    line-height: 150%;
+    color: #344f1080;
+    letter-spacing: 0%;
+  }
+  &__line {
+    position: absolute;
+    left: 80px;
+
+    grid-row: 1;
+
+    width: 1px;
+    height: 88px;
+    margin-top: 145px;
+
+    background-color: #344f10;
+  }
+  &__content {
+    display: grid;
+    grid-column: 3 / 12;
+    grid-row: 1;
+    grid-template-columns: repeat(10, 1fr);
+    column-gap: 20px;
+    align-items: start;
+  }
+  &__title {
+    grid-column: 1/7;
+    grid-row: 1;
+    align-self: start;
+
+    margin: 0 0 34px;
+
+    font-size: 36px;
+    font-weight: 600;
+    font-style: SemiBold;
+    color: #344f10;
+  }
+  &__description {
+    grid-column: 1/7;
+    grid-row: 1;
+    align-self: start;
+
+    margin-bottom: 34px;
+
+    font-size: 16px;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 150%;
+    color: #344f10;
+  }
+  &__form {
+    grid-column: 1/7;
+    grid-row: 1;
+    align-self: start;
+
+    margin-bottom: 34px;
+
+    font-size: 16px;
+    font-weight: 400;
+    font-style: Regular;
+    line-height: 150%;
+    color: #344f10;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  &__label {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-weight: 500;
+    font-style: Medium;
+    line-height: 150%;
+    color: #344f10;
+
+    background-color: rgb(184, 142, 166);
+  }
+  &__input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+
+    font: inherit;
+
+    background: transparent;
+    outline: none;
+    textarea.contact__input {
+      resize: vertical;
+      min-height: 44px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+
+    color: #fff;
+    &:hover {
+      border: 1px solid #333;
+      color: #333;
+      background-color: #e4dfd3;
+    }
+  }
+  &__foto {
+    grid-column: 7/11;
+    grid-row: 1;
+    align-self: start;
+    margin-top: 20px;
+  }
+  &__image {
+    display: block;
+  }
+}
