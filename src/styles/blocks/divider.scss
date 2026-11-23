@@ -22,6 +22,7 @@
         display: none;
       }
     }
+
     @include for-tablet {
       @media (max-width: 1279px) {
         display: none;

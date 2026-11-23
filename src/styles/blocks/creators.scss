@@ -15,6 +15,12 @@
 
   font-family: Poppins, sans-serif;
 
+       @include for-mobile {
+       @media (max-width: 767px) {
+      padding-inline: 20px;
+      }
+    }
+
   @include for-tablet {
     @media (max-width: 1279px) {
       grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -36,6 +42,16 @@
     box-sizing: border-box;
     width: 100%;
     min-width: 0;
+
+       @include for-mobile {
+       @media (max-width: 767px) {
+        grid-column: 1 / -1;
+        justify-self: start;
+        margin-bottom: 100px;
+
+      
+      }
+    }
 
     @include for-tablet {
       @media (max-width: 1279px) {
@@ -69,6 +85,13 @@
     color: #344f1080;
     letter-spacing: 0%;
 
+
+     @include for-mobile {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
     @include for-tablet {
       @media (max-width: 1279px) {
         display: none;
@@ -86,6 +109,13 @@
     margin-top: 145px;
 
     background-color: #344f10;
+
+
+     @include for-mobile {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
 
     @include for-tablet {
       @media (max-width: 1279px) {
@@ -119,6 +149,8 @@
     &--tablet {
       display: none;
 
+  
+
       @include for-tablet {
         @media (max-width: 1279px) {
           display: block;
@@ -143,16 +175,27 @@
     margin-bottom: 30px;
     line-height: 150%;
 
+  
+
     &--second-desktop {
       margin-bottom: 30px;
+      
     }
 
-    &--paragraph-desktop {
-      margin-bottom: 20px;
+&--paragraph-desktop {
+  margin-bottom: 20px;
+
+  @include for-mobile {
+    @media (max-width: 767px) {
+      display: none;
     }
+  }
+}
 
     &--desktop {
       display: block;
+
+      
 
       @include for-tablet {
         @media (max-width: 1279px) {
@@ -163,6 +206,7 @@
 
     &--tablet {
       display: none;
+  
 
       @include for-tablet {
         @media (max-width: 1279px) {
@@ -181,6 +225,7 @@
     &--second-tablet {
       display: none;
 
+      
       @include for-tablet {
         @media (max-width: 1279px) {
           display: block;
@@ -219,6 +264,8 @@
   &__images {
     grid-column: 7/ 13;
     grid-row: 1;
+
+ 
   }
 
   &__images--desktop {
@@ -226,15 +273,25 @@
     grid-column: 7/ 13;
     grid-row: 1;
 
+
+        @include for-mobile {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
     @include for-tablet {
       @media (max-width: 1279px) {
         display: none;
+        
       }
     }
   }
 
   &__images--tablet {
     display: none;
+
+ 
 
     @include for-tablet {
       @media (max-width: 1279px) {
@@ -259,6 +316,8 @@
 
     object-fit: cover;
     object-position: center;
+
+    
 
     @include for-tablet {
       @media (max-width: 1279px) {
@@ -299,6 +358,8 @@
       border: 1px solid #333;
       color: #333;
       background-color: #e4dfd3;
+
+
     }
 
     @include for-tablet {
@@ -307,5 +368,14 @@
         place-self: end stretch;
       }
     }
+
+      @include for-mobile {
+  @media (max-width: 767px) {
+    grid-column: 1 / -1;
+    justify-self: center;
+   
   }
+}
+  }
+
 }
