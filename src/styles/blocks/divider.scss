@@ -17,6 +17,11 @@
     grid-column: 1 / 6;
     margin-bottom: 100px;
 
+    @include for-mobile {
+      @media (max-width: 1279px) {
+        display: none;
+      }
+    }
     @include for-tablet {
       @media (max-width: 1279px) {
         display: none;
@@ -28,6 +33,12 @@
     grid-column: 7/ -1;
     margin-top: 131px;
     margin-bottom: 200px;
+
+        @include for-mobile {
+      @media (max-width: 1279px) {
+        display: none;
+      }
+    }
 
     @include for-tablet {
       @media (max-width: 1279px) {
