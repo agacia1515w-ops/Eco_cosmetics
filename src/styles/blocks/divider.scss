@@ -35,7 +35,7 @@
     margin-top: 131px;
     margin-bottom: 200px;
 
-        @include for-mobile {
+    @include for-mobile {
       @media (max-width: 1279px) {
         display: none;
       }

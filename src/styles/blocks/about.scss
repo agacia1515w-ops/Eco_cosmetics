@@ -9,11 +9,11 @@
 
   padding-inline: 150px 50px;
 
-      @include for-mobile {
-       @media (max-width: 767px) {
+  @include for-mobile {
+    @media (max-width: 767px) {
       padding-inline: 20px;
-      }
     }
+  }
 
   @include for-tablet {
     @media (max-width: 1279px) {
@@ -37,13 +37,11 @@
     box-sizing: border-box;
     width: 100%;
 
-     @include for-mobile {
-       @media (max-width: 767px) {
+    @include for-mobile {
+      @media (max-width: 767px) {
         grid-column: 1 / -1;
         justify-self: start;
         margin-bottom: 100px;
-
-      
       }
     }
 
@@ -71,11 +69,11 @@
 
     background-color: #344f10;
 
-      @include for-mobile {
-        @media (max-width: 639px) {
-          display: none;
-        }
+    @include for-mobile {
+      @media (max-width: 639px) {
+        display: none;
       }
+    }
 
     @include for-tablet {
       @media (max-width: 1279px) {
@@ -104,11 +102,11 @@
     color: #344f10;
     letter-spacing: 0%;
 
-      @include for-mobile {
-        @media (max-width: 639px) {
-          display: none;
-        }
+    @include for-mobile {
+      @media (max-width: 639px) {
+        display: none;
       }
+    }
 
     @include for-tablet {
       @media (max-width: 1279px) {
@@ -130,8 +128,6 @@
     color: #333;
     letter-spacing: 0%;
 
-    
-
     @include for-tablet {
       @media (max-width: 1279px) {
         width: 100%;
@@ -146,15 +142,13 @@
     &--second {
       margin-bottom: 40px;
 
-       @include for-mobile {
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
+      @include for-mobile {
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
     }
     &--desktop {
-
-      
       @include for-tablet {
         @media (max-width: 1279px) {
           display: none;
@@ -237,11 +231,11 @@
     width: 100%;
     min-width: 0;
 
-      @include for-mobile {
-        @media (max-width: 639px) {
-          display: none;
-        }
+    @include for-mobile {
+      @media (max-width: 639px) {
+        display: none;
       }
+    }
 
     @include for-tablet {
       @media (max-width: 1279px) {
