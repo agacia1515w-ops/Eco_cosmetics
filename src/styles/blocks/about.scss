@@ -10,9 +10,7 @@
   padding-inline: 150px 50px;
 
   @include for-mobile {
-    @media (max-width: 767px) {
-      padding-inline: 20px;
-    }
+    padding-inline: 20px;
   }
 
   @include for-tablet {
@@ -38,11 +36,9 @@
     width: 100%;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        grid-column: 1 / -1;
-        justify-self: start;
-        margin-bottom: 100px;
-      }
+      grid-column: 1 / -1;
+      justify-self: start;
+      margin-bottom: 100px;
     }
 
     @include for-tablet {
@@ -70,9 +66,7 @@
     background-color: #344f10;
 
     @include for-mobile {
-      @media (max-width: 639px) {
-        display: none;
-      }
+      display: none;
     }
 
     @include for-tablet {
@@ -103,9 +97,7 @@
     letter-spacing: 0%;
 
     @include for-mobile {
-      @media (max-width: 639px) {
-        display: none;
-      }
+      display: none;
     }
 
     @include for-tablet {
@@ -143,9 +135,7 @@
       margin-bottom: 40px;
 
       @include for-mobile {
-        @media (max-width: 767px) {
-          display: none;
-        }
+        display: none;
       }
     }
     &--desktop {
@@ -232,9 +222,7 @@
     min-width: 0;
 
     @include for-mobile {
-      @media (max-width: 639px) {
-        display: none;
-      }
+      display: none;
     }
 
     @include for-tablet {

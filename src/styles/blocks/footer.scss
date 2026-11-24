@@ -16,14 +16,12 @@
   background-color: #344f1080;
 
   @include for-mobile {
-    @media (max-width: 767px) {
-      grid-template-columns: minmax(0, 1fr);
-      row-gap: 30px;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 30px;
 
-      box-sizing: border-box;
-      height: auto;
-      padding: 30px 20px 90px;
-    }
+    box-sizing: border-box;
+    height: auto;
+    padding: 30px 20px 90px;
   }
 
   @include for-tablet {
@@ -48,14 +46,12 @@
     margin-top: 60px;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        grid-column: 1 / -1;
-        grid-row: 1;
-        gap: 20px;
+      grid-column: 1 / -1;
+      grid-row: 1;
+      gap: 20px;
 
-        margin-top: 0;
-        padding-bottom: 40px;
-      }
+      margin-top: 0;
+      padding-bottom: 40px;
     }
 
     @include for-tablet {
@@ -75,13 +71,10 @@
     margin-bottom: 80px;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        flex-direction: column;
-        gap: 15px;
-
-        margin-top: 0;
-        margin-bottom: 0;
-      }
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 0;
+      margin-bottom: 0;
     }
 
     @include for-tablet {
@@ -109,17 +102,15 @@
     letter-spacing: 0;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        gap: 12px;
+      grid-column: 1 / -1;
+      grid-row: 2;
+      gap: 12px;
 
-        width: 100%;
-        min-width: 0;
-        margin-top: 0;
+      width: 100%;
+      min-width: 0;
+      margin-top: 0;
 
-        font-size: 14px;
-      }
+      font-size: 14px;
     }
 
     @include for-tablet {
@@ -141,10 +132,8 @@
     letter-spacing: 0;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        font-size: 14px;
-        overflow-wrap: anywhere;
-      }
+      font-size: 14px;
+      overflow-wrap: anywhere;
     }
   }
 
@@ -164,9 +153,7 @@
     text-transform: capitalize;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        display: none;
-      }
+      display: none;
     }
 
     @include for-tablet {
@@ -177,23 +164,21 @@
       display: none;
 
       @include for-mobile {
-        @media (max-width: 767px) {
-          position: absolute;
-          bottom: 30px;
-          left: 50%;
-          transform: translateX(-50%);
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
 
-          display: block;
+        display: block;
 
-          width: calc(100% - 40px);
-          margin: 0;
+        width: calc(100% - 40px);
+        margin: 0;
 
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 150%;
-          color: #e4dfd3;
-          text-align: center;
-        }
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+        color: #e4dfd3;
+        text-align: center;
       }
 
       @include for-tablet {
@@ -224,9 +209,7 @@
     display: none;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        display: block;
-      }
+      display: block;
     }
 
     @include for-tablet {
@@ -239,12 +222,9 @@
     margin-bottom: 20px;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        margin-top: 0;
-        margin-bottom: 0;
-
-        font-size: 14px;
-      }
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 14px;
     }
 
     @include for-tablet {
@@ -259,12 +239,9 @@
     margin-bottom: 20px;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        margin-bottom: 0;
-
-        font-size: 14px;
-        white-space: normal;
-      }
+      margin-bottom: 0;
+      font-size: 14px;
+      white-space: normal;
     }
 
     @include for-tablet {
@@ -278,13 +255,10 @@
     gap: 20px;
 
     @include for-mobile {
-      @media (max-width: 767px) {
-        position: absolute;
-        top: 150px;
-        left: 20px;
-
-        align-items: center;
-      }
+      position: absolute;
+      top: 150px;
+      left: 20px;
+      align-items: center;
     }
 
     @include for-tablet {
@@ -304,13 +278,10 @@
 
   &__social-icon {
     @include for-mobile {
-      @media (max-width: 767px) {
-        display: block;
-        width: 20px;
-        height: 20px;
-
-        object-fit: contain;
-      }
+      display: block;
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
     }
   }
 }

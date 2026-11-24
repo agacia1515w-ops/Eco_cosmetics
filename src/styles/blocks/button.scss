@@ -77,10 +77,8 @@
     background-color: #333;
 
     @include for-mobile {
-      @media (max-width: 639px) {
-        margin-bottom: 100px;
-        margin-inline: auto;
-      }
+      margin-bottom: 100px;
+      margin-inline: auto;
     }
 
     @include for-tablet {

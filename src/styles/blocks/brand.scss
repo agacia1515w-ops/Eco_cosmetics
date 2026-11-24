@@ -12,6 +12,8 @@
   width: 100%;
   padding-inline: 150px 50px;
 
+  font-family: Poppins, sans-serif;
+
   @include for-large-desktop {
     padding-right: 150px;
     padding-left: 230px;
@@ -43,26 +45,24 @@
   }
 
   @include for-tablet {
-    @media (max-width: 1279px) {
-      &__title-desktop {
-        display: none;
-      }
+    &__title-desktop {
+      display: none;
+    }
 
-      &__title-tablet {
-        display: inline;
+    &__title-tablet {
+      display: inline;
 
-        font-size: 36px;
-        font-weight: 600;
-        font-style: SemiBold;
-        line-height: 150%;
-        text-align: center;
-        text-transform: capitalize;
-        letter-spacing: 0%;
-      }
+      font-size: 36px;
+      font-weight: 600;
+      font-style: SemiBold;
+      line-height: 150%;
+      text-align: center;
+      text-transform: capitalize;
+      letter-spacing: 0%;
+    }
 
-      &__title {
-        font-size: 36px;
-      }
+    &__title {
+      font-size: 36px;
     }
   }
 
@@ -144,38 +144,36 @@
   }
 
   @include for-mobile {
-    @media (max-width: 639px) {
-      padding-inline: 0;
+    padding-inline: 0;
 
-      &__content {
-        padding-inline: 20px;
-        text-align: center;
-      }
+    &__content {
+      padding-inline: 20px;
+      text-align: center;
+    }
 
-      &__title {
-        margin-bottom: 15px;
-        font-size: 24px;
-        line-height: 150%;
-      }
+    &__title {
+      margin-bottom: 15px;
+      font-size: 24px;
+      line-height: 150%;
+    }
 
-      &__title-desktop {
-        display: none;
-      }
+    &__title-desktop {
+      display: none;
+    }
 
-      &__title-tablet {
-        display: block;
+    &__title-tablet {
+      display: block;
 
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 150%;
-        text-align: center;
-      }
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 150%;
+      text-align: center;
+    }
 
-      &__text {
-        margin-bottom: 30px;
-        font-size: 14px;
-        line-height: 150%;
-      }
+    &__text {
+      margin-bottom: 30px;
+      font-size: 14px;
+      line-height: 150%;
     }
   }
 }
