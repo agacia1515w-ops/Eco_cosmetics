@@ -4,40 +4,40 @@
   position: relative;
 
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 10px;
 
   box-sizing: border-box;
   width: 100%;
   margin-bottom: 100px;
-  padding-inline: 150px 50px;
+  padding-inline: 20px;
 
   font-family: Poppins, sans-serif;
 
-  @include for-mobile {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 10px;
-    padding-inline: 20px;
+  @include for-tablet {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap: 20px;
+    align-items: start;
+
+    padding-inline: 27px;
   }
 
-  @include for-tablet {
-    @media (max-width: 1279px) {
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      column-gap: 20px;
-      align-items: start;
-      padding-inline: 27px;
-    }
+  @include for-desktop {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: normal;
 
-    @include for-large-desktop {
-      padding-inline: 230px 130px;
-    }
+    padding-inline: 150px 50px;
+  }
+
+  @include for-large-desktop {
+    padding-inline: 230px 130px;
   }
 
   &__text {
     position: absolute;
     left: 80px;
 
-    display: flex;
+    display: none;
     align-items: flex-start;
     justify-content: flex-end;
 
@@ -50,14 +50,8 @@
     line-height: 130%;
     color: #344f1080;
 
-    @include for-mobile {
-      display: none;
-    }
-
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        display: none;
-      }
+    @include for-desktop {
+      display: flex;
     }
   }
 
@@ -65,6 +59,7 @@
     position: absolute;
     left: 90px;
 
+    display: none;
     grid-row: 1;
 
     width: 1px;
@@ -73,35 +68,29 @@
 
     background-color: #344f10;
 
-    @include for-mobile {
-      display: none;
-    }
-
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        display: none;
-      }
+    @include for-desktop {
+      display: block;
     }
   }
 
   &__content {
-    grid-column: 1 / 8;
+    grid-column: 1 / -1;
     grid-row: 1;
 
-    @include for-mobile {
-      grid-column: 1 / -1;
-      grid-row: 1;
-      width: 100%;
-      min-width: 0;
-    }
+    width: 100%;
+    min-width: 0;
 
     @include for-tablet {
-      @media (max-width: 1279px) {
-        grid-column: 1 / 7;
-        grid-row: 1;
-        width: 100%;
-        max-height: 100%;
-      }
+      grid-column: 1 / 7;
+      max-height: 100%;
+    }
+
+    @include for-desktop {
+      grid-column: 1 / 8;
+
+      width: auto;
+      min-width: auto;
+      max-height: none;
     }
   }
 
@@ -109,47 +98,47 @@
     grid-column: 1 / 7;
     align-self: start;
 
-    margin-bottom: 287px;
+    margin-bottom: 30px;
 
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 600;
+    line-height: 150%;
     color: #344f10;
+    text-align: left;
     text-transform: uppercase;
-    letter-spacing: 5%;
-
-    @include for-mobile {
-      margin-bottom: 30px;
-
-      font-size: 24px;
-      line-height: 150%;
-      text-align: left;
-      letter-spacing: 0;
-    }
+    letter-spacing: 0;
 
     @include for-tablet {
-      @media (max-width: 1279px) {
-        width: 320px;
-        max-width: none;
+      width: 320px;
+      max-width: none;
+      margin-bottom: 287px;
+    }
 
-        font-size: 24px;
-        line-height: 150%;
-        letter-spacing: 0;
-      }
+    @include for-desktop {
+      width: auto;
+
+      font-size: 36px;
+      line-height: normal;
+      letter-spacing: 0.05em;
     }
   }
 
   &__link {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+
     display: inline-block;
     grid-column: 1 / 6;
 
-    margin-bottom: 200px;
+    margin: 0;
 
     font-size: 14px;
     font-weight: 500;
     line-height: 130%;
     color: #344f10;
     text-decoration: none;
-    letter-spacing: 0%;
+    letter-spacing: 0;
 
     &:hover {
       color: #333;
@@ -157,16 +146,18 @@
       text-underline-offset: 12px;
     }
 
-    @include for-mobile {
-      position: absolute;
-      bottom: 0;
-      left: 20px;
-      margin: 0;
+    @include for-tablet {
+      position: static;
+      bottom: auto;
+      left: auto;
+
+    
     }
 
-    @media (min-width: 1280px) {
+    @include for-desktop {
       position: absolute;
       bottom: 0;
+
       margin-bottom: 30px;
     }
   }
@@ -174,73 +165,69 @@
   &__product {
     position: relative;
 
-    grid-column: 7 / 13;
-    grid-row: 1;
+    grid-column: 2 / -1;
+    grid-row: 2;
+    justify-self: end;
 
     width: 100%;
     min-width: 0;
+    max-width: 180px;
+    margin-bottom: 30px;
 
-    @include for-mobile {
-      grid-column: 2 / -1;
-      grid-row: 2;
-      justify-self: end;
+    @include for-tablet {
+      grid-column: 7 / 13;
+      grid-row: 1;
+      justify-self: auto;
 
-      width: 100%;
-      min-width: 0;
-      max-width: 180px;
-      margin-bottom: 30px;
+      max-width: none;
+      margin-bottom: 0;
     }
   }
 
   &__image {
     display: block;
+
     height: auto;
+
     object-fit: contain;
-  }
 
-  &__image--desktop {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-
-    @include for-mobile {
+    &--desktop {
       display: none;
-    }
 
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        display: none;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+
+      @include for-desktop {
+        display: block;
       }
     }
-  }
 
-  &__image--tablet {
-    display: none;
+    &--tablet {
+      display: none;
 
-    @include for-tablet {
-      @media (max-width: 1279px) {
+      @include for-tablet {
         display: block;
+
         width: 100%;
         max-width: none;
         height: auto;
       }
+
+      @include for-desktop {
+        display: none;
+      }
     }
 
-    @include for-mobile {
-      display: none;
-    }
-  }
+    &--mobile {
+      display: block;
 
-  &__image--mobile {
-    display: none;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
 
-    @include for-mobile {
-      @media (max-width: 767px) {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
+      @include for-tablet {
+        display: none;
       }
     }
   }
@@ -252,7 +239,7 @@
 
   &__label {
     position: absolute;
-    right: 110%;
+    right: calc(100% + 10px);
     left: auto;
 
     display: flex;
@@ -260,70 +247,58 @@
 
     width: max-content;
 
-    @include for-mobile {
-      right: calc(100% + 10px);
+    @include for-tablet {
+      right: 110%;
+    }
+
+    &:nth-child(1) {
+      top: 10%;
+    }
+
+    &:nth-child(2) {
+      top: 30%;
+
+      @include for-tablet {
+        top: 27%;
+      }
+
+      @include for-desktop {
+        top: 30%;
+      }
+    }
+
+    &:nth-child(3) {
+      top: 48%;
+    }
+
+    &:nth-child(4) {
+      top: 67%;
+
+      @include for-tablet {
+        top: 66%;
+      }
+
+      @include for-desktop {
+        top: 67%;
+      }
+    }
+
+    &:nth-child(5) {
+      top: 85%;
     }
   }
 
   &__name {
-    margin-right: 8px;
-    font-size: 16px;
+    margin-right: 0;
+
+    font-size: 14px;
     color: #333;
     white-space: nowrap;
 
-    @include for-mobile {
-      margin-right: 0;
-      font-size: 14px;
-    }
-  }
-
-  &__label:nth-child(1) {
-    top: 10%;
-
     @include for-tablet {
-      @media (max-width: 1279px) {
-        top: 10%;
-      }
-    }
-  }
+      margin-right: 8px;
 
-  &__label:nth-child(2) {
-    top: 30%;
-
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        top: 27%;
-      }
-    }
-  }
-
-  &__label:nth-child(3) {
-    top: 48%;
-
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        top: 48%;
-      }
-    }
-  }
-
-  &__label:nth-child(4) {
-    top: 67%;
-
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        top: 66%;
-      }
-    }
-  }
-
-  &__label:nth-child(5) {
-    top: 85%;
-
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        top: 85%;
-      }
+      font-size: 16px;
     }
   }
 }

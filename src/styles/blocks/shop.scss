@@ -4,34 +4,32 @@
   position: relative;
 
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  column-gap: 20px;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: 0;
 
   box-sizing: border-box;
   width: 100%;
-  padding-inline: 150px 50px;
+  padding-inline: 0;
 
   @include for-tablet {
-    @media (max-width: 1279px) {
-      grid-template-columns: repeat(6, minmax(0, 1fr));
-      column-gap: 20px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap: 20px;
 
-      box-sizing: border-box;
-      width: 100%;
-      max-width: 1280px;
-      margin-inline: auto;
-      padding-inline: 27px;
-    }
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 27px;
+  }
+
+  @include for-desktop {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+
+    max-width: none;
+    margin-inline: 0;
+    padding-inline: 150px 50px;
   }
 
   @include for-large-desktop {
     padding-inline: 230px 130px;
-  }
-
-  @include for-mobile {
-    grid-template-columns: minmax(0, 1fr);
-    column-gap: 0;
-    padding-inline: 0;
   }
 
   &__text {
@@ -40,7 +38,7 @@
     left: 70px;
     transform: rotate(0deg);
 
-    display: flex;
+    display: none;
     align-items: flex-start;
     justify-content: flex-end;
 
@@ -52,16 +50,10 @@
     font-weight: 500;
     line-height: 130%;
     color: #344f10;
-    letter-spacing: 0%;
+    letter-spacing: 0;
 
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        display: none;
-      }
-    }
-
-    @include for-mobile {
-      display: none;
+    @include for-desktop {
+      display: flex;
     }
   }
 
@@ -70,93 +62,87 @@
     top: 49px;
     left: 80px;
 
+    display: none;
+
     width: 1px;
     height: 100px;
 
     background-color: #344f10;
 
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        display: none;
-      }
-    }
-
-    @include for-mobile {
-      display: none;
+    @include for-desktop {
+      display: block;
     }
   }
 
   &__title {
-    grid-column: 1 / 12;
+    grid-column: 1 / -1;
     grid-row: 1;
+    justify-self: start;
 
-    margin: 0 0 30px;
+    margin: 0 0 30px 20px;
 
     font-family: Poppins, sans-serif;
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 600;
     color: #344f10;
+    text-align: left;
     text-transform: uppercase;
-    letter-spacing: 5%;
+    letter-spacing: 0.05em;
 
     @include for-tablet {
-      @media (max-width: 1279px) {
-        grid-column: 1 / -1;
-        margin-left: 0;
-        font-size: 24px;
-      }
+      justify-self: auto;
+
+      margin-left: 0;
     }
 
-    @include for-mobile {
-      grid-column: 1 / -1;
-      justify-self: start;
+    @include for-desktop {
+      grid-column: 1 / 12;
 
-      margin-left: 20px;
-
-      font-size: 24px;
-      text-align: left;
+      font-size: 36px;
     }
   }
 
   &__nav {
     display: flex;
-    grid-column: 1 / 12;
+    grid-column: 1 / -1;
     grid-row: 2;
-    gap: 40px;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: space-between;
+    justify-self: stretch;
+
+    min-width: 0;
+    padding-inline: 20px;
 
     @include for-tablet {
-      @media (max-width: 1279px) {
-        grid-column: 1 / -1;
-        flex-wrap: wrap;
-        gap: 30px;
-        padding-left: 0;
-      }
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: flex-start;
+      justify-self: auto;
+
+      padding-inline: 0;
     }
 
-    @include for-mobile {
-      grid-column: 1 / -1;
+    @include for-desktop {
+      grid-column: 1 / 12;
       flex-wrap: nowrap;
-      gap: 8px;
-      justify-content: space-between;
-      justify-self: stretch;
+      gap: 40px;
 
-      min-width: 0;
-      padding-inline: 20px;
+      min-width: auto;
     }
   }
 
   &__link {
-    margin-bottom: 86px;
+    margin-bottom: 30px;
 
     font-family: Poppins, sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 150%;
     color: #828282;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 5%;
+    letter-spacing: 0.05em;
 
     &:hover {
       color: #333;
@@ -164,53 +150,41 @@
       text-underline-offset: 10px;
     }
 
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        margin-bottom: 30px;
-        font-size: 14px;
-      }
-    }
+    @include for-desktop {
+      margin-bottom: 86px;
 
-    @include for-mobile {
-      margin-bottom: 30px;
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 
   &__products {
     display: grid;
-    grid-column: 1 / 12;
+    grid-column: 1 / -1;
     grid-row: 3;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
 
-    @media (min-width: 1280px) {
-      grid-column: 1 / 13;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-    }
+    width: 100%;
+    min-width: 0;
 
     @include for-tablet {
-      @media (max-width: 1279px) {
-        grid-column: 1 / -1;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 30px;
-
-        width: 100%;
-        min-width: 0;
-      }
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 30px;
     }
 
-    @include for-mobile {
-      grid-column: 1 / -1;
-      grid-template-columns: minmax(0, 1fr);
-      column-gap: 0;
+    @include for-desktop {
+      grid-column: 1 / 13;
+      gap: 20px;
 
-      width: 100%;
-      min-width: 0;
+      width: auto;
+      min-width: auto;
     }
   }
 
   &__product {
+    width: 100%;
+    min-width: 0;
+
     font-family: Poppins, sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -218,99 +192,88 @@
     color: #333;
     text-align: start;
     text-transform: uppercase;
-    letter-spacing: 5%;
+    letter-spacing: 0.05em;
 
     @include for-tablet {
-      @media (max-width: 1279px) {
-        min-width: 0;
-      }
+      width: auto;
     }
 
-    @include for-mobile {
-      width: 100%;
-      min-width: 0;
+    @include for-desktop {
+      min-width: auto;
     }
 
     &--mobile {
-      @include for-mobile {
-        display: none;
+      display: none;
+
+      @include for-tablet {
+        display: block;
       }
     }
   }
 
   &__image {
-    margin-bottom: 20px;
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 20px;
+    padding: 0;
+
+    object-fit: cover;
 
     @include for-tablet {
-      @media (max-width: 1279px) {
-        display: block;
-
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-
-        object-fit: contain;
-      }
+      object-fit: contain;
     }
 
-    @media (min-width: 1280px) {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
+    @include for-desktop {
+      max-width: none;
 
-    @include for-mobile {
-      display: block;
-
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      margin: 0 0 20px;
-      padding: 0;
-
-      object-fit: cover;
+      object-fit: fill;
     }
   }
 
   &__name {
     margin-bottom: 13px;
+    margin-left: 20px;
 
-    @include for-mobile {
-      margin-left: 20px;
+    @include for-tablet {
+      margin-left: 0;
     }
   }
 
   &__price {
     margin-bottom: 40px;
+    margin-left: 20px;
 
     font-size: 18px;
     font-weight: 500;
     line-height: 150%;
     text-transform: uppercase;
-    letter-spacing: 5%;
+    letter-spacing: 0.05em;
 
     @include for-tablet {
-      @media (max-width: 1279px) {
-        margin-bottom: 50px;
-      }
+      margin-bottom: 50px;
+      margin-left: 0;
     }
 
-    @include for-mobile {
-      margin-left: 20px;
+    @include for-desktop {
+      margin-bottom: 40px;
     }
   }
 
   &__button {
     display: flex;
-    grid-column: 1 / 13;
+    grid-column: 1 / -1;
     grid-row: 4;
     align-items: center;
     justify-content: center;
     justify-self: center;
 
-    width: 280px;
+    width: min(280px, calc(100% - 40px));
     height: 60px;
     margin-bottom: 200px;
+    margin-inline: auto;
 
     font-family: Poppins, sans-serif;
     font-size: 16px;
@@ -320,7 +283,7 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 15%;
+    letter-spacing: 0.15em;
 
     background-color: #333;
 
@@ -329,19 +292,17 @@
       color: #333;
       background-color: #e4dfd3;
     }
-
+@include for-mobile {
+    margin-bottom: 100px;
+    }
     @include for-tablet {
-      @media (max-width: 1279px) {
-        grid-column: 1 / -1;
-        justify-self: center;
-        margin-inline: auto;
-      }
+      width: 280px;
     }
 
-    @include for-mobile {
-      grid-column: 1 / -1;
-      width: min(280px, calc(100% - 40px));
-      margin-inline: auto;
+    @include for-desktop {
+      grid-column: 1 / 13;
+
+      margin-inline: 0;
     }
   }
 }

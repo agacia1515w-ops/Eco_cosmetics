@@ -10,37 +10,23 @@
 }
 
 .divider {
+  display: none;
+
   height: 1px;
   background-color: #344f1080;
+
+  @include for-desktop {
+    display: block;
+  }
 
   &--first {
     grid-column: 1 / 6;
     margin-bottom: 100px;
-
-    @include for-mobile {
-      display: none;
-    }
-
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        display: none;
-      }
-    }
   }
 
   &--second {
-    grid-column: 7/ -1;
+    grid-column: 7 / -1;
     margin-top: 131px;
     margin-bottom: 200px;
-
-    @include for-mobile {
-      display: none;
-    }
-
-    @include for-tablet {
-      @media (max-width: 1279px) {
-        display: none;
-      }
-    }
   }
 }
