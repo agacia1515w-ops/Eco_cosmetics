@@ -82,17 +82,17 @@
       gap: 15px;
       margin-top: 29px;
     }
-    @include for-desktop {
 
+    @include for-desktop {
+      flex-direction: row;
+      gap: 40px;
       padding-inline: 50px;
-  flex-direction: row;
-  gap: 40px;
-}
+    }
 
     @include for-large-desktop {
-      padding-inline: 130px;
-      gap: 40px;
       flex-direction: row;
+      gap: 40px;
+      padding-inline: 130px;
     }
   }
 

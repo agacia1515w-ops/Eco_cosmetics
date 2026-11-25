@@ -22,7 +22,6 @@
 
   @include for-desktop {
     grid-template-columns: repeat(12, minmax(0, 1fr));
-
     max-width: none;
     margin-inline: 0;
     padding-inline: 150px 50px;
@@ -91,13 +90,11 @@
 
     @include for-tablet {
       justify-self: auto;
-
       margin-left: 0;
     }
 
     @include for-desktop {
       grid-column: 1 / 12;
-
       font-size: 36px;
     }
   }
@@ -127,7 +124,6 @@
       grid-column: 1 / 12;
       flex-wrap: nowrap;
       gap: 40px;
-
       min-width: auto;
     }
   }
@@ -152,7 +148,6 @@
 
     @include for-desktop {
       margin-bottom: 86px;
-
       font-size: 18px;
     }
   }
@@ -175,7 +170,6 @@
     @include for-desktop {
       grid-column: 1 / 13;
       gap: 20px;
-
       width: auto;
       min-width: auto;
     }
@@ -228,7 +222,6 @@
 
     @include for-desktop {
       max-width: none;
-
       object-fit: fill;
     }
   }
@@ -292,16 +285,17 @@
       color: #333;
       background-color: #e4dfd3;
     }
-@include for-mobile {
-    margin-bottom: 100px;
+
+    @include for-mobile {
+      margin-bottom: 100px;
     }
+
     @include for-tablet {
       width: 280px;
     }
 
     @include for-desktop {
       grid-column: 1 / 13;
-
       margin-inline: 0;
     }
   }

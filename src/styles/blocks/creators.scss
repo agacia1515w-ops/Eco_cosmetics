@@ -17,10 +17,11 @@
 
   @include for-tablet {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    margin-bottom: 200px;
-    padding-inline: 27px;
     grid-template-rows: auto 1fr;
     row-gap: 30px;
+
+    margin-bottom: 200px;
+    padding-inline: 27px;
   }
 
   @include for-desktop {
@@ -45,7 +46,6 @@
     @include for-tablet {
       grid-column: 1 / 4;
       justify-self: stretch;
-
       max-height: 100%;
       margin-bottom: 0;
     }
@@ -222,7 +222,6 @@
       text-decoration: underline;
       text-underline-offset: 13px;
     }
-    
 
     @include for-tablet {
       align-self: flex-start;
@@ -291,13 +290,11 @@
 
     @include for-desktop {
       max-width: 100%;
-     
     }
   }
 
   &__button {
     position: relative;
-  
 
     display: flex;
     grid-column: 1 / -1;
@@ -326,24 +323,16 @@
       color: #333;
       background-color: #e4dfd3;
     }
- 
 
     @include for-tablet {
       grid-column: 1 / 4;
-       align-self: end;
-  justify-self: start;
-
-  margin-top: 0;
+      place-self: end start;
+      margin-top: 0;
     }
 
- @include for-desktop {
-  transform: none;
-
-  grid-column: 1 / 5;
-
-
-
- 
-}
+    @include for-desktop {
+      transform: none;
+      grid-column: 1 / 5;
+    }
   }
 }

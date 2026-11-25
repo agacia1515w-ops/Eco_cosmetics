@@ -18,14 +18,12 @@
     grid-template-columns: repeat(6, minmax(0, 1fr));
     column-gap: 20px;
     align-items: start;
-
     padding-inline: 27px;
   }
 
   @include for-desktop {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     align-items: normal;
-
     padding-inline: 150px 50px;
   }
 
@@ -76,7 +74,6 @@
   &__content {
     grid-column: 1 / -1;
     grid-row: 1;
-
     width: 100%;
     min-width: 0;
 
@@ -87,7 +84,6 @@
 
     @include for-desktop {
       grid-column: 1 / 8;
-
       width: auto;
       min-width: auto;
       max-height: none;
@@ -116,7 +112,6 @@
 
     @include for-desktop {
       width: auto;
-
       font-size: 36px;
       line-height: normal;
       letter-spacing: 0.05em;
@@ -150,14 +145,11 @@
       position: static;
       bottom: auto;
       left: auto;
-
-    
     }
 
     @include for-desktop {
       position: absolute;
       bottom: 0;
-
       margin-bottom: 30px;
     }
   }
@@ -186,14 +178,11 @@
 
   &__image {
     display: block;
-
     height: auto;
-
     object-fit: contain;
 
     &--desktop {
       display: none;
-
       width: 100%;
       max-width: 100%;
       height: auto;
@@ -208,7 +197,6 @@
 
       @include for-tablet {
         display: block;
-
         width: 100%;
         max-width: none;
         height: auto;
@@ -221,7 +209,6 @@
 
     &--mobile {
       display: block;
-
       width: 100%;
       max-width: 100%;
       height: auto;
@@ -290,14 +277,12 @@
 
   &__name {
     margin-right: 0;
-
     font-size: 14px;
     color: #333;
     white-space: nowrap;
 
     @include for-tablet {
       margin-right: 8px;
-
       font-size: 16px;
     }
   }
