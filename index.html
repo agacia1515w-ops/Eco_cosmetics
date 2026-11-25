@@ -311,24 +311,40 @@ rel="stylesheet">
       </section>
 
 <section class="product__card" id="product-card">
-
   <div class="product__card-container">
-
     <div class="product__card-image">
-      <img
-        src="src/images/card-tablet.png"
-        alt="Almond shampoo with lavender oil"
-      />
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="src/images/card-tablet.png"
+        />
+
+        <img
+          src="src/images/oil-tablet.png"
+          alt="Cosmetic product"
+        />
+      </picture>
     </div>
 
     <div class="product__card-content">
-
       <h2 class="product__card-title">
-        Almond shampoo with lavender oil
+        <span class="product__card-title--mobile">
+          Hydrophilic oil
+        </span>
+
+        <span class="product__card-title--tablet">
+          Almond shampoo with lavender oil
+        </span>
       </h2>
 
       <p class="product__card-price">
-        70 UAH
+        <span class="product__card-price--mobile">
+          160 UAH
+        </span>
+
+        <span class="product__card-price--tablet">
+          70 UAH
+        </span>
       </p>
 
       <p class="product__card-weight">
@@ -343,7 +359,6 @@ rel="stylesheet">
       </button>
 
       <div class="product__card-details">
-
         <p class="product__card-description">
           <span>Ingredients:</span>
           cocosulfate, aloe hydrolate, sweet almond oil,
@@ -356,13 +371,9 @@ rel="stylesheet">
           hair or draw a block over wet hair, foam, massage,
           rinse, apply balm or conditioner.
         </p>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
 
       <section class="creators" >
