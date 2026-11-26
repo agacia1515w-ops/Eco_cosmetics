@@ -267,48 +267,106 @@ rel="stylesheet">
 </div>
 </section>
 
-      <section class="shop" id="shop">
-         <div class="shop__text">
-    shop
-  </div>
-       <div class="shop__line"></div>
-       <h3 class="shop__title">SHOP</h3>
+     <section class="shop" id="shop">
+  <div class="shop__text">shop</div>
+  <div class="shop__line"></div>
 
-       <nav class="shop__nav">
+  <h3 class="shop__title">SHOP</h3>
 
-        <a href="#" class="shop__link">FACE</a>
-        <a href="#" class="shop__link">BODY</a>
-        <a href="#" class="shop__link">HAIR</a>
-        <a href="#" class="shop__link">CANDLES</a>
-        </nav>
+  <nav class="shop__nav" aria-label="Product categories">
+    <button
+      type="button"
+      class="shop__link shop__link--active"
+      data-category="face"
+      aria-pressed="true"
+    >
+      FACE
+    </button>
 
-        <div class="shop__products">
+    <button
+      type="button"
+      class="shop__link"
+      data-category="body"
+      aria-pressed="false"
+    >
+      BODY
+    </button>
 
-          <article class="shop__product">
-          <img 
-          class="shop__image"
-          src="src/images/oil.png" 
-          alt="Hydrophilic oil"
-          />
-               
+    <button
+      type="button"
+      class="shop__link"
+      data-category="hair"
+      aria-pressed="false"
+    >
+      HAIR
+    </button>
+
+    <button
+      type="button"
+      class="shop__link"
+      data-category="candles"
+      aria-pressed="false"
+    >
+      CANDLES
+    </button>
+  </nav>
+
+  <div class="shop__products" tabindex="0" aria-label="Products">
+  <article
+    class="shop__product"
+    data-product="face body candles"
+  >
+    <img
+      class="shop__image"
+      src="src/images/oil.png"
+      alt="Hydrophilic oil"
+    />
+
     <h4 class="shop__name">Hydrophilic oil</h4>
     <p class="shop__price">160 UAH</p>
-   </article>
+  </article>
 
-          <article class="shop__product shop__product--mobile">
- <img class="shop__image"
-               src="src/images/ubtan.png"
-      alt="Cosmetic oil"
+  <article
+    class="shop__product"
+    data-product="face body hair candles"
+  >
+    <img
+      class="shop__image"
+      src="src/images/ubtan.png"
+      alt="Ubtan"
     />
-    <h4 class="shop__name">ubtan</h4>
+
+    <h4 class="shop__name">Ubtan</h4>
     <p class="shop__price">160 UAH</p>
-    
-   </article>
+  </article>
+
+  <article
+    class="shop__product"
+    data-product="hair"
+    hidden
+  >
+    <img
+      class="shop__image"
+      src="src/images/card-tablet.png"
+      alt="Almond shampoo with lavender oil"
+    />
+
+    <h4 class="shop__name">
+      Almond shampoo with lavender oil
+    </h4>
+
+    <p class="shop__price">70 UAH</p>
+  </article>
+
+  <p class="shop__empty" role="status" hidden>
+    No products available
+  </p>
 </div>
 
-<a href="#product-card" class="shop__button">all products</a>
-       
-      </section>
+  <a href="#product-card" class="shop__button"  >
+    ALL PRODUCTS
+  </a>
+</section>
 
 <section class="product__card" id="product-card">
   <div class="product__card-container">
@@ -347,14 +405,9 @@ rel="stylesheet">
         </span>
       </p>
 
-      <p class="product__card-weight">
-        30 G
-      </p>
+      <p class="product__card-weight">30 G</p>
 
-      <button
-        class="product__card-button"
-        type="button"
-      >
+      <button class="product__card-button" type="button">
         ADD TO BAG
       </button>
 
@@ -362,19 +415,22 @@ rel="stylesheet">
         <p class="product__card-description">
           <span>Ingredients:</span>
           cocosulfate, aloe hydrolate, sweet almond oil,
-          wheat proteins, chamomile grass, lavender essential oil.
+          wheat proteins, chamomile grass, lavender
+          essential oil.
         </p>
 
         <p class="product__card-description">
           <span>Application:</span>
-          foam the shampoo in your hands and apply foam on the
-          hair or draw a block over wet hair, foam, massage,
-          rinse, apply balm or conditioner.
+          foam the shampoo in your hands and apply foam
+          on the hair or draw a block over wet hair,
+          foam, massage, rinse, apply balm or conditioner.
         </p>
       </div>
     </div>
   </div>
 </section>
+
+
 
       <section class="creators" >
         <div class="creators__text">about the creators</div>
